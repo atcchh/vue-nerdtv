@@ -1,0 +1,53 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - layout
+// global layout classes - height, width, padding, margin, etc.
+
+.l-padding-vert {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.l-padding-top {
+  padding-top: 50px;
+}
+
+.l-padding-bottom {
+  padding-bottom: 50px;
+}
+
+.l-margin-top {
+  margin-top: 25px;
+}
+
+.l-margin-bottom {
+  margin-bottom: 25px;
+}
+
+.l-margin-vert {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+// Header
+// -------------------------------------
+
+.l-header {
+  @extend %clearfix;
+  background: color(mid-dark-gray);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(0,0,0,0.35);
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.l-header__logo {
+  height: 60px;
+  width: 180px;
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    height: 90px;
+    width: 270px;
+  }
+}

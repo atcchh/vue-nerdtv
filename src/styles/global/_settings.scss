@@ -1,0 +1,74 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - settings
+// @font-face declarations, variables
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - @font-face
+// add fonts to project as needed by updating the $font-folders and $font-names maps below
+
+$font-folders: 'cabritosans';
+$font-names: 'cabritosans-medium', 'cabritosans-demi', 'cabritosans-bold';
+
+@each $font-folder in $font-folders  {
+  @each $font-name in $font-names {
+    @font-face {
+      font-family: #{$font-name};
+      src: url('../assets/fonts/#{$font-folder}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+           url('../assets/fonts/#{$font-folder}/#{$font-name}.woff') format('woff'),
+           url('../assets/fonts/#{$font-folder}/#{$font-name}.ttf') format('truetype'),
+           url('../assets/fonts/#{$font-folder}/#{$font-name}.svg##{$font-name}') format('svg');
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - variables
+
+// - - colors map
+$colors: (
+  yellow: #f2ab2c,
+
+  orange: #e15829,
+  white: #f5f4f1,
+  green: #6a8136,
+
+  blue: #5c5b56,
+  light-blue: #eaf3f8,
+
+  dark-gray: #4d4d4d,
+  mid-dark-gray: #444440,
+  mid-gray: #666,
+  gray: #eaeaea,
+  medium-gray: #b3b3b3,
+  mid-light-gray: #808080,
+  light-gray: #f1efe9,
+
+  process-aqua: #00A6B2,
+  process-orange: #ea7c24,
+);
+
+// - - grab colors from $colors map
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+// - - typography
+$font-cs-bold: 'cabritosans-bold', "Lucida Sans", sans-serif;
+$font-cs-medium: 'cabritosans-medium', "Lucida Sans", sans-serif;
+$font-cs-demi: 'cabritosans-demi', "Lucida Sans", sans-serif;
+
+$font-serif: 'Lucida Bright', Georgia, sans-serif;
+$font-sans-serif: 'Lucida Grande', Arial, sans-serif;
+
+$font-roboto: 'Roboto', sans-serif;
+
+$font-size-h1-large:               2.625rem !default;
+$font-size-h2-large:               1.5rem !default;
+$font-size-h3-large:               1.2rem !default;
+
+// - - grid

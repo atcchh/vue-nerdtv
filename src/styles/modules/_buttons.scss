@@ -1,0 +1,39 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - buttons module
+// styles for the buttons module
+
+// - - - - - - - - - - - - - - - - - - -
+// - - button skins
+
+.btn-skin-gray {
+  background-color: color(medium-gray);
+  color: #fff;
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+
+.btn-skin-white {
+  background-color: #fff;
+  color: color(mid-light-gray);
+  border-bottom: 1px solid color(medium-gray);
+  &:hover,
+  &:focus {
+    color: color(dark-gray);
+  }
+}
+
+.btn--logo {
+  font-family: $font-roboto;
+}
+
+.btn-shadow {
+  text-shadow: 1px 1px 2px #333;
+}
+
+.btn-logo--login {
+  height: 18px;
+  weight: 18px;
+  margin-right: 24px;
+}

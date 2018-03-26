@@ -1,0 +1,79 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - base
+// project defaults for base elements - h1-h6, p, a, etc.
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: $font-size-h1;
+  color: color(yellow);
+  font-family: $font-cs-demi;
+  padding-top: 1em;
+  padding-bottom: 0.25em;
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    font-size: $font-size-h1-large;
+  }
+}
+
+h2 {
+  font-size: $font-size-h2;
+  font-family: $font-serif;
+  padding-bottom: 0.45em;
+  padding-top: 0.50em;
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    font-size: $font-size-h2-large;
+  }
+}
+
+h3 {
+  font-size: $font-size-base;
+  font-family: $font-cs-demi;
+  padding-bottom: 0.1em;
+  padding-top: 0.30em;
+  color: color(mid-dark-gray);
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    font-size: $font-size-h3-large;
+  }
+}
+
+nav > ul {
+  margin: 0;
+}
+
+ul {
+  @extend %clearfix;
+  margin: 0 20px 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+label {
+  font-size: 15px;
+  color: color(mid-light-gray);
+  cursor: pointer;
+  font-family: $font-cs-demi;
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+
+footer {
+  font-size: 15px;
+  color: color(mid-light-gray);
+  font-family: $font-cs-medium;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
